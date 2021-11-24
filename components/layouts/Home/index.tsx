@@ -6,11 +6,15 @@ import { useInView } from "react-intersection-observer";
 import { transition, toTop, fadeIn } from "animations/index";
 import Skill from "components/global/Skill";
 import type { skillProps } from "components/global/Skill";
+import Work from "components/global/Work";
 import { useEffect, useState } from "react";
 
 // Types
 type skillsProps = {
     skills: Array<{ name: string; photo?: string }>;
+};
+type worksProps = {
+    works: Array<{ name: string; photo?: string; link: string }>;
 };
 
 // Header
@@ -33,7 +37,7 @@ export const Header = () => {
                         work.
                     </p>
                     <div className={styles.buttons}>
-                        <Link href="#">
+                        <Link href="#worksSection">
                             <a className="button primary">View Works</a>
                         </Link>
                         <Link href="#">
@@ -97,6 +101,25 @@ export const Skills = ({ skills: skillsFromProps }: skillsProps) => {
             </div>
             <div className="row">
                 <div className={styles.skillsContainer}>{skills}</div>
+            </div>
+        </section>
+    );
+};
+
+// My Works Section
+
+export const Works = ({ works: worksFromProps = [] }: worksProps) => {
+    // Maps
+    const works = worksFromProps.map((work, index) => {
+        return <div key={index}></div>;
+    });
+    return (
+        <section className={styles.works} id="worksSection">
+            <div className="row">
+                <h2 className="main-title">My Works</h2>
+            </div>
+            <div className="row">
+                <div className={styles.worksContainer}>{works}</div>
             </div>
         </section>
     );

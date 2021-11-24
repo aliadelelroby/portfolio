@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Header, Skills } from "layouts/Home";
+import { Header, Skills, Works } from "layouts/Home";
 import skills from "data/skills";
+import works from "data/works";
 const Home: NextPage = () => {
     return (
         <div id="home-page">
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
             <div className="container">
                 <Header />
                 <Skills skills={skills} />
+                <Works works={works} />
             </div>
         </div>
     );
