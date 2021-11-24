@@ -1,0 +1,47 @@
+/* Skill */
+.skill {
+    height: 60px;
+    width: 60px;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.skill::after {
+    content: attr(data-title);
+    padding: 3px 20px;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -100%);
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: 14px;
+    background-color: var(--black-200);
+}
+.skill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid var(--primary);
+    transform: rotate(90deg) translate(-100%, 0);
+}
+
+.skill::before,
+.skill::after {
+    opacity: 0;
+    user-select: none;
+    transition: opacity 300ms;
+}
+
+.skill:hover::before,
+.skill:hover::after {
+    opacity: 1;
+}

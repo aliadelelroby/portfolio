@@ -1,0 +1,14 @@
+/* 404 Page Style */
+.notFoundPage {
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-200);
+    color: var(--white);
+    font-size: 20px;
+}
+
+.special {
+    color: var(--primary);
+}
