@@ -14,7 +14,12 @@ type skillsProps = {
     skills: Array<{ name: string; photo?: string }>;
 };
 type worksProps = {
-    works: Array<{ name: string; photo?: string; link: string }>;
+    works: Array<{
+        cover: string;
+        title: string;
+        demo: string;
+        github: string;
+    }>;
 };
 
 // Header
@@ -88,7 +93,7 @@ export const Skills = ({ skills: skillsFromProps }: skillsProps) => {
                 ref={ref}
                 initial={toTop.initial}
                 animate={onView ? toTop.animate : ""}
-                transition={{ delay: index * 0.2, duration: 0.5 }}
+                transition={{ delay: index * 0.3, duration: 0.5 }}
             >
                 <Skill name={name} photo={photo} />
             </motion.div>
@@ -111,7 +116,11 @@ export const Skills = ({ skills: skillsFromProps }: skillsProps) => {
 export const Works = ({ works: worksFromProps = [] }: worksProps) => {
     // Maps
     const works = worksFromProps.map((work, index) => {
-        return <div key={index}></div>;
+        return (
+            <div key={index} className="col-12 col-sm-12 col-md-6 col-lg-4">
+                <Work delay={index} work={work} />
+            </div>
+        );
     });
     return (
         <section className={styles.works} id="worksSection">
@@ -119,7 +128,9 @@ export const Works = ({ works: worksFromProps = [] }: worksProps) => {
                 <h2 className="main-title">My Works</h2>
             </div>
             <div className="row">
-                <div className={styles.worksContainer}>{works}</div>
+                <div className={styles.worksContainer}>
+                    <div className="row justify-content-center">{works}</div>
+                </div>
             </div>
         </section>
     );

@@ -7,12 +7,6 @@ import { Main } from "layouts/index";
 function MyApp({ Component, pageProps, router }: AppProps) {
     return (
         <Main router={router}>
-            {/* Ion Icons */}
-            <Script
-                type="module"
-                src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-            />
-            <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" />
             <Component {...pageProps} />
         </Main>
     );
