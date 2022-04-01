@@ -1,16 +1,16 @@
 /* Cursor Styling */
 .cursor {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 3px solid var(--white);
-    position: fixed;
-    z-index: 10000;
-    opacity: 0.7;
-    pointer-events: none;
-    transition: top 30ms, left 30ms, transform 200ms, opacity 200ms;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  position: fixed;
+  z-index: 10000;
+  opacity: 0.7;
+  pointer-events: none;
+  transition: top 10ms, left 10ms, transform 200ms, opacity 200ms;
 }
 .cursor.pointer {
-    transform: scale(1.3);
-    opacity: 0.3;
+  transform: scale(1.3);
+  opacity: 0.3;
 }

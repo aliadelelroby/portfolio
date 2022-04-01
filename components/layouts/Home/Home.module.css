@@ -2,98 +2,98 @@
 
 /* Header Section */
 section.header {
-    margin-top: 100px;
+   margin-top: 100px;
 }
 
 section.header h3 {
-    color: var(--white);
+   color: var(--white);
 }
 
 section.header h1 {
-    color: var(--primary);
+   color: var(--primary);
 }
 
 section.header p {
-    color: var(--p);
-    font-size: 18px;
+   color: var(--p);
+   font-size: 18px;
 }
 
 section.header .photoContainer {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 20px;
 }
 
 section.header .photoContainer .photo {
-    height: 230px;
-    width: 230px;
-    border-radius: 50%;
-    border: 4px solid var(--white);
-    background-color: var(--black-100);
-    position: relative;
-    overflow: hidden;
+   height: 230px;
+   width: 230px;
+   border-radius: 50%;
+   border: 4px solid var(--white);
+   background-color: var(--black-100);
+   position: relative;
+   overflow: hidden;
 }
 
 section.header .buttons {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: 20px;
-    margin-top: 20px;
+   display: flex;
+   gap: 30px;
+   margin-top: 30px;
 }
 
 /* Header Responsive */
 
 /* Mobile */
 @media (max-width: 767.98px) {
-    section.header p {
-        font-size: 16px;
-    }
+   section.header p {
+      font-size: 16px;
+   }
 
-    section.header p br {
-        display: none;
-    }
-    section.header .photo {
-        margin-top: 30px;
-    }
+   section.header p br {
+      display: none;
+   }
+   section.header .photo {
+      margin-top: 30px;
+   }
 }
 
 /* Skills Section */
 
 section.skills {
-    margin-top: 150px;
+   margin-top: 150px;
 }
 
 section.skills .skillsContainer {
-    width: 90%;
-    max-width: 600px;
-    margin-top: 50px;
-    margin-inline: auto;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    row-gap: 60px;
+   width: 90%;
+   max-width: 600px;
+   margin-top: 50px;
+   margin-inline: auto;
+   justify-content: space-between;
+   display: grid;
+   grid-template-columns: repeat(5, auto);
+   row-gap: 60px;
 }
 
 /* Skills Responsive */
 
 /* Mobile */
 @media (max-width: 767.98px) {
-    section.skills {
-        margin-top: 100px;
-    }
-    section.skills .skillsContainer {
-        grid-template-columns: repeat(4, auto);
-    }
+   section.skills {
+      margin-top: 100px;
+   }
+   section.skills .skillsContainer {
+      grid-template-columns: repeat(4, auto);
+   }
 }
 
 /* My Works Section */
 section.works {
-    margin-top: 150px;
+   margin-top: 150px;
 }
 
 section .worksContainer {
-    width: 90%;
-    margin-top: 100px;
-    margin-inline: auto;
+   width: 98%;
+   margin-top: 100px;
+   margin-inline: auto;
 }
